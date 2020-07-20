@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ext_name=sleepy-birb-redirect
+
+mkdir -p "$ext_name"
+cp manifest.json "$ext_name"
+cp background.js "$ext_name"
+cp -R img "$ext_name"

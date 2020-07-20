@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ext_name=sleepy-birb-redirect
+
+rm -r "$ext_name"
+rm "$ext_name.crx"
+rm "$ext_name.pem"
