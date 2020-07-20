@@ -1,7 +1,7 @@
 {
   "name": "sleepy-birb-redirect",
   "version": "1.0.1",
-  "description": "[Chrome extension](https://chrome.google.com/webstore/detail/old-reddit-redirect/dneaehbmnbhcippjikoajpoabadpodje)",
+  "description": "Redirect certain URLs to the Sleepy Birb web app",
   "main": "background.js",
   "scripts": {
     "lint": "eslint --ext .ts,.tsx,.js .",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JackCuthbert/old-reddit-redirect.git"
+    "url": "git+https://github.com/JackCuthbert/sleepy-birb-redirect.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JackCuthbert/old-reddit-redirect/issues"
+    "url": "https://github.com/JackCuthbert/sleepy-birb-redirect/issues"
   },
-  "homepage": "https://github.com/JackCuthbert/old-reddit-redirect#readme",
+  "homepage": "https://github.com/JackCuthbert/sleepy-birb-redirect#readme",
   "devDependencies": {
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
