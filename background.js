@@ -1,41 +1,34 @@
-const oldReddit = "https://old.reddit.com";
-const excludedPaths = [
-  "/gallery",
-  "/poll",
-  "/rpan",
-  "/settings",
-  "/topics"];
+// const sleepyBirb = 'https://sleepy-birb.vercel.app'
+const sleepyBirb = 'http://localhost:3000'
 
 chrome.webRequest.onBeforeRequest.addListener(
-  function(details) {
-    const url = new URL(details.url);
-    
-    if (url.hostname === "old.reddit.com") return;
-    
-    for (const path of excludedPaths) {
-      if (url.pathname.indexOf(path) === 0) return;
+  function (details) {
+    const url = new URL(details.url)
+
+    // if sleepy is false, don't redirect
+    if (url.search === '?sleepy=false') return
+
+    // don't redirect on home page
+    if (url.pathname === '/' || url.pathname === '/home') return
+
+    console.log(url)
+
+    return {
+      redirectUrl: sleepyBirb + '/?t=' + url.href
     }
-    
-    return {redirectUrl: oldReddit + url.pathname + url.search + url.hash};
   },
   {
-    urls: [
-      "*://reddit.com/*",
-      "*://www.reddit.com/*",
-      "*://np.reddit.com/*",
-      "*://new.reddit.com/*",
-      "*://amp.reddit.com/*",
-    ],
+    urls: ['*://twitter.com/*', '*://mobile.twitter.com/*'],
     types: [
-      "main_frame",
-      "sub_frame",
-      "stylesheet",
-      "script",
-      "image",
-      "object",
-      "xmlhttprequest",
-      "other"
+      'main_frame',
+      'sub_frame',
+      'stylesheet',
+      'script',
+      'image',
+      'object',
+      'xmlhttprequest',
+      'other'
     ]
   },
-  ["blocking"]
-);
+  ['blocking']
+)
