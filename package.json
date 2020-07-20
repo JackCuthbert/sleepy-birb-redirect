@@ -1,6 +1,6 @@
 {
-  "name": "old-reddit-redirect",
-  "version": "1.0.0",
+  "name": "sleepy-birb-redirect",
+  "version": "1.0.1",
   "description": "[Chrome extension](https://chrome.google.com/webstore/detail/old-reddit-redirect/dneaehbmnbhcippjikoajpoabadpodje)",
   "main": "background.js",
   "scripts": {

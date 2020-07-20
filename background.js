@@ -1,5 +1,4 @@
-// const sleepyBirb = 'https://sleepy-birb.vercel.app'
-const sleepyBirb = 'http://localhost:3000'
+const sleepyBirb = 'https://sleepy-birb.vercel.app'
 
 chrome.webRequest.onBeforeRequest.addListener(
   function (details) {
