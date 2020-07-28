@@ -1,6 +1,6 @@
 {
   "name": "sleepy-birb-redirect",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Redirect certain URLs to the Sleepy Birb web app",
   "main": "background.js",
   "scripts": {
