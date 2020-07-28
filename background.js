@@ -7,8 +7,8 @@ chrome.webRequest.onBeforeRequest.addListener(
     // if sleepy is false, don't redirect
     if (url.search === '?sleepy=false') return
 
-    // don't redirect on home page
-    if (url.pathname === '/' || url.pathname === '/home') return
+    // only redirect for individual tweets
+    if (url.toLowerCase().indexOf('/status/') === -1) return
 
     console.log(url)
 

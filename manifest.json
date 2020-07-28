@@ -1,7 +1,7 @@
 {
   "name": "Sleepy Birb Redirect",
   "description": "Redirect to Sleepy Birb",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 2,
   "background": { "scripts": ["background.js"] },
   "icons": {
