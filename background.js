@@ -8,9 +8,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     if (url.search === '?sleepy=false') return
 
     // only redirect for individual tweets
-    if (url.toLowerCase().indexOf('/status/') === -1) return
-
-    console.log(url)
+    if (!url.pathname.toLowerCase().includes('/status/')) return
 
     return {
       redirectUrl: sleepyBirb + '/?t=' + url.href
